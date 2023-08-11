@@ -37,11 +37,11 @@
             @endif
             <div class="d-flex flex-column">
             <div class="d-flex flex-column items-center">
-                <div class="p-5 fs-1">Welcome to Blog Page</div>
+                <div class="p-5 fs-1 fw-bold">Welcome to Blog Page</div>
                 <div class=" px-5 w-50 fs-4 text-center">Thank you for visiting my blog page. This is a test page built with laravel</div>
             </div>
             <div class="d-flex flex-column">
-                <div class="px-5 pt-5 pb-3 fs-3">Post title</div>
+                <div class="px-5 pt-5 pb-3 fs-3 fw-bolder">Post title</div>
                 <div class=" px-5 w-50 fs-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae voluptatum, enim repellendus reiciendis quod veniam modi dolor quas iste voluptas vero consequatur nihil accusamus quo sint laboriosam quae magni et.</div>
             </div>
             </div>
