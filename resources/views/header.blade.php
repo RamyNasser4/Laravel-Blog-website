@@ -19,10 +19,10 @@
                         @auth
                         @else
                         <li class="nav-item">
-                                    <a class="nav-link" href="/login">Login</a>
+                                    <a class="nav-link fw-bolder" href="/login">Login</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="/register">Register</a>
+                                    <a class="nav-link fw-bolder" href="/register">Register</a>
                                 </li>
                         @endauth
                     </ul>
