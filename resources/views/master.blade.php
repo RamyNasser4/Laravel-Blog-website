@@ -9,7 +9,7 @@
 <body>
     <div class="h-100">
         <header>@include('header')</header>
-        <div id="main" class="d-flex flex-column justify-center items-center vh-100">@yield('content')</div>
+        <div id="main" class="d-flex flex-column justify-center items-center" style="height: 100%;">@yield('content')</div>
         <footer>@include('footer')</footer>
     </div>
     <script src="{{ asset('js/app.js') }}" defer></script>

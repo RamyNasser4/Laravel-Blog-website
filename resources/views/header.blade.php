@@ -16,12 +16,15 @@
                     <!-- Right Side Of Navbar -->
                     <ul class="navbar-nav ms-auto">
                         <!-- Authentication Links -->
+                        @auth
+                        @else
                         <li class="nav-item">
                                     <a class="nav-link" href="/login">Login</a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link" href="/register">Register</a>
                                 </li>
+                        @endauth
                     </ul>
                 </div>
             </div>
