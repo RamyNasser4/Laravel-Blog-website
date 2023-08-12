@@ -1,0 +1,42 @@
+.newpostcontainer{
+    width:30%;
+    padding:1em;
+border-color:rgb(1, 1, 131);
+border-width:1px;
+border-radius:1em;
+border-style:solid;
+}
+.postbuttons{
+    display:flex;
+    justify-content:space-between;
+
+}
+.postbuttons{
+    padding-top:2em;
+}
+.createbutton{
+    padding-right:1em;
+}
+
+.cancelbutton{
+    padding-left:1em;
+
+}
+.create{
+
+color:rgb(6, 6, 128);
+font-weight:600;
+  
+}
+.name{
+padding-bottom:1em;
+}
+
+.contenttext{
+    width:100%;
+    height:50px;
+    border:none;
+}
+::-webkit-input-placeholder{
+    text-align:center;
+}
