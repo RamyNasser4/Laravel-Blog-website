@@ -33,7 +33,7 @@ return redirect ('Home');
 else{
     return Redirect::back()->withErrors(
         [
-            'password' => 'Snap! you are done!'
+            'password' => 'the password is not correct'
         ]
     );}
 
@@ -42,7 +42,8 @@ else{
 else{
     return Redirect::back()->withErrors(
         [
-            'email' => 'Snap! you are done!'
+            'email' => 'the email is not correct',
+            'password' => 'the password is not correct'
         ]
     );
 }
