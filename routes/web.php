@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\LoginController;
+use App\Http\Controller\newpostcontroller;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -23,3 +24,4 @@ Auth::routes();
 Route::get('/Home', [App\Http\Controllers\PostController::class, 'show'])->name('Home');
 Route::get('/login1', [App\Http\Controllers\LoginController::class, 'login']);
 Route::post('/login/user', [App\Http\Controllers\LoginController::class, 'loginUser'])->name('login/user');  
+Route::get('/newpost',[App\Http\Controller\newpostcontroller::class]);

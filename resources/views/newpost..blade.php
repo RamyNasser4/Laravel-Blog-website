@@ -1,5 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
+@extends('master')
+@section('content')
 
 <head>
     <meta charset="UTF-8">
@@ -8,6 +8,7 @@
 <link rel="stylesheet" href="newpost.css">
     </head>
     <body>
+    <header>@include('header')</header>
         <div class="newpostcontainer">
             <div class="postheader">  
             <div class="name">Aly</div>
@@ -27,5 +28,6 @@
                 
             </div>
         </div>
+        <footer>@include('footer')</footer>
     </body>
-</html>
+    @endsection
