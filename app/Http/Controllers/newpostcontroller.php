@@ -3,8 +3,11 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\Post;
 
-class newpostcontroller extends Controllers {
+
+
+class newpostcontroller extends Controller {
+    public function addnewpost(){
     return view('newpost');
+}
 }

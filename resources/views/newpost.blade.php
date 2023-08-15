@@ -5,10 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Create post</title>
-<link rel="stylesheet" href="newpost.css">
+  
     </head>
     <body>
-    <header>@include('header')</header>
+    
         <div class="newpostcontainer">
             <div class="postheader">  
             <div class="name">Aly</div>
@@ -23,11 +23,11 @@
                     <a class="cancel">Cancel</a>
                 </div>
                 <div class="createbutton">
-                    <a class="create">Post</a>
+                    <a class="create"href="/">Post</a>
                 </div>
                 
             </div>
         </div>
-        <footer>@include('footer')</footer>
+        
     </body>
     @endsection

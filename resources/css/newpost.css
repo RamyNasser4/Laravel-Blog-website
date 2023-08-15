@@ -5,11 +5,12 @@ border-color:rgb(1, 1, 131);
 border-width:1px;
 border-radius:1em;
 border-style:solid;
+
 }
 .postbuttons{
     display:flex;
     justify-content:space-between;
-
+    
 }
 .postbuttons{
     padding-top:2em;
@@ -20,7 +21,7 @@ border-style:solid;
 
 .cancelbutton{
     padding-left:1em;
-
+   
 }
 .cancel{
     color:rgb(68, 67, 67);
