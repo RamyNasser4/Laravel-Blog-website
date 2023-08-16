@@ -10,17 +10,18 @@
     
 
     <body>
-
+    @auth
+    @foreach($users as $user)
         <div class="newpostcontainer">
             <div class="postheader">  
-            <div class="name" name="username"> Aly</div>
-            <div class="userid" name="userid">901</div>
+            <div class="name" name="username">{{$user->name}}</div>
+            <div class="userid" name="userid">{{$user->id}}</div>
             </div>
-           
+           <form method="post" action="">
             <div class="title">
-                <input type="text" class="titletext" placeholder="Write your title here"></div>
+                <input type="text"  class="titletext" name="post_title" placeholder="Write your title here"></div>
             <div class="postcontent">
-                <input type="text" class="contenttext" placeholder="What's on your mind?"></div>
+                <input type="text" class="contenttext" name="post_body" placeholder="What's on your mind?"></div>
             <div class="postbuttons">
                 <div class="cancelbutton">
                     <a class="cancel" href="/Home">Cancel</a>
@@ -30,7 +31,9 @@
                 </div>
                 
             </div>
+            </form>
         </div>
- 
+    @endforeach
+    @endauth
     </body>
     @endsection

@@ -27,3 +27,4 @@ Route::get('/login1', [App\Http\Controllers\LoginController::class, 'login']);
 Route::post('/login/user', [App\Http\Controllers\LoginController::class, 'loginUser'])->name('login/user');  
 Route::get('/newpost',[App\Http\Controllers\newpostcontroller::class,'addnewpost']);
 Route::get('/onepost/{id}',[App\Http\Controllers\OnepostController::class,'onepost']); 
+Route::post('/onepost/{id}',[OnepostController::class,'newcomment']);
