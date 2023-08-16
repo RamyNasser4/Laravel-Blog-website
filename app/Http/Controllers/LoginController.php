@@ -5,10 +5,12 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\User;
 use Hash;
-use session;
+use Session;
 use Redirect;
+
 class LoginController extends Controller
 {
+   
    public function login (){
 return view ('login');
 
@@ -28,7 +30,8 @@ $request->validate([
   
 if ($user){
 if ($request->password==$user->password){
-return redirect ('Home');
+Session::put('loginid',$user->id);  
+return Redirect('Home');
 }
 else{
     return Redirect::back()->withErrors(
@@ -47,5 +50,12 @@ else{
         ]
     );
 }
+}
+public function logout(){
+
+    if (Session::has('loginid')){
+        Session::pull('loginid');
+        return Redirect('login1');
+    }
 }
 }

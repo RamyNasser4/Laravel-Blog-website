@@ -21,7 +21,8 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::get('/Home', [App\Http\Controllers\PostController::class, 'show'])->name('Home');
+ Route::get('/Home', [App\Http\Controllers\PostController::class, 'show'])->name('Home');
 Route::get('/login1', [App\Http\Controllers\LoginController::class, 'login']);
-Route::post('/login/user', [App\Http\Controllers\LoginController::class, 'loginUser'])->name('login/user');  
+Route::post('Home', [App\Http\Controllers\LoginController::class, 'loginUser'])->name('Home1');  
 Route::get('/newpost',[App\Http\Controller\newpostcontroller::class]);
+Route::get('/logout', [App\Http\Controllers\LoginController::class, 'logout']);

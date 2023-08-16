@@ -9,8 +9,9 @@ Session::forget('success');
 @endphp
 </div>
 @endif
+
 <section class="vh-100 gradient-custom">
-<form method="post" action="{{ route('login/user') }}">
+<form method="post" action="{{ route('Home1') }}">
                         @csrf
   <div class="container py-5 h-100">
     <div class="row d-flex justify-content-center align-items-center h-100">
