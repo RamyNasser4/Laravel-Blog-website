@@ -15,7 +15,7 @@
             <div class="px-5 d-flex flex-column">
                 <div class=" pt-5 pb-3 fs-1 fw-bold">{{$post->post_title}}</div>
                 <div class=" w-50 fs-4">{{$post->post_body}}</div>
-                <a href=""><button type="button" class="btn btn-primary mt-3" style="width: 10em;">Read more</button></a>
+                <a href="onepost/{{$post->id}}"><button type="button" class="btn btn-primary mt-3" style="width: 10em;">Read more</button></a>
             </div>
             </div>
             @endforeach
