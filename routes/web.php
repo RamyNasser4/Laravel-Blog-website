@@ -25,5 +25,5 @@ Auth::routes();
 Route::get('/Home', [App\Http\Controllers\PostController::class, 'show'])->name('Home');
 Route::get('/login1', [App\Http\Controllers\LoginController::class, 'login']);
 Route::post('/login/user', [App\Http\Controllers\LoginController::class, 'loginUser'])->name('login/user');  
-Route::get('/newpost',[App\Http\Controllers\newpostcontroller::class]);
-Route::get('/onepost',[App\Http\Controllers\OnepostController::class],'onepost');
+Route::get('/newpost',[App\Http\Controllers\newpostcontroller::class,'addnewpost']);
+Route::get('/onepost/{id}',[App\Http\Controllers\OnepostController::class,'onepost']); 

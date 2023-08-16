@@ -16,14 +16,22 @@
               </div>
             </div>
             <!-- content -->
-            <p class="mt-3 mb-4 pb-2">
+            <p style="font-weight: 1000 ;">
               {{$post->post_body}}
             </p>
+            <hr>
 @endforeach
             <!-- Show Old Comments Related to this post -->
+            @foreach($comments as $comment)
             <div>
+                  <p>
+                    {{$comment->comment_body}} <br>
+                  </p>  
 
             </div>
+            <hr>
+            @endforeach
+            
             <div class="small d-flex justify-content-start">
               <a href="#textAreaExample" class="d-flex align-items-center me-3">
                 <i class="far fa-comment-dots me-2"></i>
@@ -36,6 +44,7 @@
           <div class="card-footer py-3 border-0" style="background-color: #f8f9fa;">
             <div class="d-flex flex-start w-100">
               <div class="form-outline w-100">
+              @auth
                 <textarea class="form-control" id="textAreaExample" rows="4"
                   style="background: #fff;"></textarea>
               </div>
@@ -44,8 +53,9 @@
                 <!-- Add new Comment -->
               <button type="button" class="btn btn-primary btn-sm">Post comment</button>
               <!-- back to the Home -->
+              @endauth
               <a href="/Home">
-                  <button type="button" class="btn btn-outline-primary btn-sm" >Cancel</button>
+                  <button type="button" class="btn btn-outline-primary btn-sm" >Home</button>
                 </a>
             </div>
           </div>
