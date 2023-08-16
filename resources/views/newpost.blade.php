@@ -10,11 +10,12 @@
     
 
     <body>
-
+    @auth
+    @foreach($users as $user)
         <div class="newpostcontainer">
             <div class="postheader">  
-            <div class="name" name="username"> Aly</div>
-            <div class="userid" name="userid">901</div>
+            <div class="name" name="username">{{$user->name}}</div>
+            <div class="userid" name="userid">{{$user->id}}</div>
             </div>
            
             <div class="title">
@@ -31,6 +32,7 @@
                 
             </div>
         </div>
- 
+    @endforeach
+    @endauth
     </body>
     @endsection
