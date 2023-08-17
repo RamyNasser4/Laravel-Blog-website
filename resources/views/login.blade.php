@@ -22,7 +22,7 @@ Session::forget('success');
             <div class="mb-md-5 mt-md-4 pb-5">
 
               <h2 class="fw-bold mb-2 text-uppercase">Login</h2>
-              <p class="text-white-50 mb-5">Please enter your login and password!</p>
+              <p class="text-white-50 mb-5">Please enter your email and password!</p>
 
               <div class="form-outline form-white mb-4">
                 <input type="email" placeholder="Email" id="typeEmailX" class=" form-control-lg @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}"  autocomplete="email" autofocus/>
@@ -43,8 +43,13 @@ Session::forget('success');
                                     </span>
                                 @enderror   
               </div>
+             
               <button class="btn btn-outline-light btn-lg px-5" type="submit">Login</button>
+              <div style="padding:2em;">
+              Don't have an account? <a href="/register">Register</a>
             </div>
+            </div>
+
           </div>
         </div>
       </div>

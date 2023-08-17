@@ -23,8 +23,8 @@ $request->validate([
     'email'=>'required',
     'password'=>'required'
 ],[
-    'email.required' => "EMAIL field is required",
-    'password.required' => "password field is required"
+    'email.required' => "Email field is required",
+    'password.required' => "Password field is required"
     ]);
     $user=User::where('email','=',$request->email )->first();
   
@@ -36,7 +36,7 @@ return Redirect('Home');
 else{
     return Redirect::back()->withErrors(
         [
-            'password' => 'the password is not correct'
+            'password' => 'The password is not correct'
         ]
     );}
 
@@ -45,8 +45,8 @@ else{
 else{
     return Redirect::back()->withErrors(
         [
-            'email' => 'the email is not correct',
-            'password' => 'the password is not correct'
+            'email' => 'The email is not correct',
+            'password' => 'The password is not correct'
         ]
     );
 }
