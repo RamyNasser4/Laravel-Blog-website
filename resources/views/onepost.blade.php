@@ -59,6 +59,7 @@
           <div class="card-footer py-3 border-0" style="background-color: #f8f9fa;">
             <div class="d-flex flex-start w-100">
                 <div class="form-outline w-100">
+                @if(Session::has('loginid'))
             <form action="/onepost/{{$post->id}}" method="post">
                 @csrf
                     <textarea class="form-control" id="newcomment" name="comment_body" rows="4"
@@ -70,7 +71,7 @@
                 <button type="submit" class="btn btn-primary btn-sm">Post comment</button>
                 <!-- back to the Home -->
             </form>
-            
+            @endif
             @endforeach
             
               <a href="/Home">

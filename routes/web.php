@@ -20,10 +20,10 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Auth::routes();
+/* Auth::routes(); */
 
  Route::get('/Home', [App\Http\Controllers\PostController::class, 'show'])->name('Home');
-Route::get('/login1', [App\Http\Controllers\LoginController::class, 'login']);
+Route::get('/login', [App\Http\Controllers\LoginController::class, 'login']);
 Route::post('Home', [App\Http\Controllers\LoginController::class, 'loginUser'])->name('Home1');  
 Route::get('/logout', [App\Http\Controllers\LoginController::class, 'logout']);
 Route::post('/login/user', [App\Http\Controllers\LoginController::class, 'loginUser'])->name('login/user');  

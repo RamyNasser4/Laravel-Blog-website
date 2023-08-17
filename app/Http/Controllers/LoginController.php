@@ -55,7 +55,7 @@ public function logout(){
 
     if (Session::has('loginid')){
         Session::pull('loginid');
-        return Redirect('login1');
+        return Redirect('Home');
     }
 }
 }

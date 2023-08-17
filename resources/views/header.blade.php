@@ -16,7 +16,10 @@
                     <!-- Right Side Of Navbar -->
                     <ul class="navbar-nav ms-auto">
                         <!-- Authentication Links -->
-                        @auth
+                        @if(Session::has('loginid'))
+                        <li class="nav-item">
+                                    <a class="nav-link fw-bolder" href="/logout">Logout</a>
+                                </li>
                         @else
                         <li class="nav-item">
                                     <a class="nav-link fw-bolder" href="/login">Login</a>
@@ -24,7 +27,7 @@
                                 <li class="nav-item">
                                     <a class="nav-link fw-bolder" href="/register">Register</a>
                                 </li>
-                        @endauth
+                        @endif
                     </ul>
                 </div>
             </div>

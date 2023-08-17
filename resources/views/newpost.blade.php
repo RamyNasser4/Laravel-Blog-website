@@ -10,7 +10,6 @@
     
 
     <body>
-    @auth
     @foreach($users as $user)
         <div class="newpostcontainer">
             <div class="postheader">  
@@ -34,6 +33,5 @@
             </form>
         </div>
     @endforeach
-    @endauth
     </body>
     @endsection
