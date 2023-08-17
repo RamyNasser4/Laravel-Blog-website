@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\newpostcontroller;
 use App\Http\Controllers\OnepostController;
+use App\Http\Controllers\registerController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -30,3 +31,5 @@ Route::post('/login/user', [App\Http\Controllers\LoginController::class, 'loginU
 Route::get('/newpost',[App\Http\Controllers\newpostcontroller::class,'addnewpost']);
 Route::get('/onepost/{id}',[App\Http\Controllers\OnepostController::class,'onepost']); 
 Route::post('/onepost/{id}',[OnepostController::class,'newcomment']);
+Route::get('/register',[App\Http\Controllers\registerController::class,'register']);
+Route:: post('/register',[App\Http\Controllers\registerController::class,'store']);

@@ -29,7 +29,7 @@ $request->validate([
     $user=User::where('email','=',$request->email )->first();
   
 if ($user){
-if ($request->password==$user->password){
+if (Hash::check($request->password,$user->password)){
 Session::put('loginid',$user->id);  
 return Redirect('Home');
 }
