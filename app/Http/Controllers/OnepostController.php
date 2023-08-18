@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Models\Post;
 use App\Models\Comment;
 use App\Models\User;
+use Session;
 use Illuminate\Support\Facades\Auth;
 
 
@@ -25,11 +26,22 @@ class OnepostController extends Controller
         // print_r ($users);
     }
     public function newcomment(Request $request,$id){
+        $request->validate([
+            'comment_body'=>'required|string|max:255'
         
+            
+        ],[
+            'comment_body.required'=>"You should enter a comment to post!",
+            'comment_body.max'=>"Maximum characters are 255 only!"
+        ]);
         $comment=new Comment;
         $comment->comment_body=$request->comment_body;
         $comment->post_id=$id;
-        $comment->user_id=1;
+        $user_id=Session::get('loginid');
+        $user=User::where('id',$user_id);
+        $comment->user_id=$user_id;
+
+
         // Auth::id()
         $comment->save();
         $posts = Post::where('id',$id)->get();
