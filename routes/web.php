@@ -18,11 +18,13 @@ use App\Http\Controllers\registerController;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return redirect('/Home');
 });
 
 /* Auth::routes(); */
-
+Route::fallback(function(){
+    return redirect('/Home');
+});
  Route::get('/Home', [App\Http\Controllers\PostController::class, 'show'])->name('Home');
 Route::get('/login', [App\Http\Controllers\LoginController::class, 'login']);
 Route::post('Home', [App\Http\Controllers\LoginController::class, 'loginUser'])->name('Home1');  
