@@ -29,6 +29,7 @@ Route::post('Home', [App\Http\Controllers\LoginController::class, 'loginUser'])-
 Route::get('/logout', [App\Http\Controllers\LoginController::class, 'logout']);
 Route::post('/login/user', [App\Http\Controllers\LoginController::class, 'loginUser'])->name('login/user');  
 Route::get('/newpost',[App\Http\Controllers\newpostcontroller::class,'addnewpost']);
+Route::post('/newpost',[newpostcontroller::class,'insert']);
 Route::get('/onepost/{id}',[App\Http\Controllers\OnepostController::class,'onepost']); 
 Route::post('/onepost/{id}',[OnepostController::class,'newcomment']);
 Route::get('/register',[App\Http\Controllers\registerController::class,'register']);

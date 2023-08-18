@@ -55,19 +55,26 @@ display:flex;
     height:50px;
     text-align:center;
     border:none;
+    border-radius: 5px;
 }
 .titletext{
-    width:30%;
-    height:20px;
+    width:40%;
+    height: 3em;
     border:none;
-    margin-bottom:2em;
+    margin-bottom:1em;
     text-align:center;
+    border-radius: 5px;
     
 }
 .title{
     display:flex;
+    flex-direction: column;
     justify-content:center;
+    align-items: center;
   
+}
+.postcontent{
+    margin-top: 1em;
 }
 .userid{
     padding-left:0.5em;
